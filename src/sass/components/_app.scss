@@ -1,0 +1,28 @@
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .appHeader {
+    flex: 0.1;
+  }
+  .appBody {
+    flex: 1.9;
+
+    display: flex;
+    flex-direction: row;
+    .appMap {
+      flex: 7;
+    }
+    .appMenu {
+      flex: 3;
+    }
+  }
+}
+body {
+  margin: 0px;
+}
+html {
+  font-family: "Source Sans Pro", system, system-ui, -apple-system,
+    BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}

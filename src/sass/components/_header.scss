@@ -1,0 +1,15 @@
+.header {
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  .logo {
+    padding: 8px;
+    img {
+      height: 4vh;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+}

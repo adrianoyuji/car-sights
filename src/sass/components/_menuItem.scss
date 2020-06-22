@@ -1,0 +1,41 @@
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 164px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  img {
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 8px;
+    width: 35%;
+  }
+  .propertieInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 60%;
+    .propertiesPrice {
+      font-size: x-large;
+      color: #3d5e2a;
+    }
+    .propertiesFeatures {
+      display: flex;
+      flex-direction: column;
+      .feature {
+        svg {
+          width: 16px;
+        }
+      }
+    }
+  }
+  &:hover {
+    transform: scale(0.99);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.menuItemOdd {
+  background-color: #ccc;
+}

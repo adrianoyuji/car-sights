@@ -1,0 +1,40 @@
+.menu {
+  height: 93.9vh;
+  width: 100%;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  .locationsHeader {
+    display: flex;
+    flex-direction: row;
+    flex: 0.5;
+
+    .headerButton {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex: 1;
+      border: solid;
+      border-width: 1px;
+      border-color: #ccc;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        border-color: #ccc;
+        background-color: #bbb;
+      }
+      &:active {
+        background-color: #aaa;
+      }
+    }
+  }
+  .propertiesList {
+    border-top: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    flex: 9.5;
+    overflow-y: scroll;
+  }
+}
