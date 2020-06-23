@@ -1,16 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import Modal from "react-modal";
 import * as locations from "../../locations";
 
 //components
 import Header from "../Header";
 import Map from "../Map";
 import Menu from "../Menu";
+import PropertyDetails from "../PropertyDetails";
+
+//modal style
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 
 export default function App() {
   const [locationName, setLocationName] = useState("orlando");
   const [locationData, setLocationData] = useState(locations[locationName]);
-  const [hoveredPropertie, setHoveredPropertie] = useState("");
+  const [hoveredProperty, setHoveredProperty] = useState("");
+  const [propertyDetails, setPropertyDetails] = useState(false);
 
   useEffect(() => {
     setLocationData(locations[locationName]);
@@ -25,19 +39,31 @@ export default function App() {
         <div className="appMap">
           <Map
             locationData={locationData}
-            hoveredPropertie={hoveredPropertie}
-            setHoveredPropertie={setHoveredPropertie}
+            hoveredProperty={hoveredProperty}
+            setHoveredProperty={setHoveredProperty}
+            setPropertyDetails={setPropertyDetails}
           />
         </div>
         <div className="appMenu">
           <Menu
             setLocationName={setLocationName}
             locationData={locationData}
-            hoveredPropertie={hoveredPropertie}
-            setHoveredPropertie={setHoveredPropertie}
+            hoveredProperty={hoveredProperty}
+            setHoveredProperty={setHoveredProperty}
+            setPropertyDetails={setPropertyDetails}
           />
         </div>
       </div>
+      <Modal
+        isOpen={!!propertyDetails}
+        onRequestClose={() => setPropertyDetails(false)}
+        style={customStyles}
+      >
+        <PropertyDetails
+          property={propertyDetails}
+          onClose={() => setPropertyDetails(false)}
+        />
+      </Modal>
     </div>
   );
 }

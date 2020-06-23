@@ -1,0 +1,81 @@
+.propertyContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  img {
+    object-fit: cover;
+    border-radius: 12px;
+    padding: 8px;
+    height: 50vh;
+  }
+  .propertyDetails {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .propertyClass {
+      font-size: larger;
+      font-weight: bold;
+    }
+    .propertyAddress {
+      font-size: larger;
+      font-weight: 300;
+    }
+    .propertyPrice {
+      font-size: xx-large;
+      color: #3d5e2a;
+    }
+    .propertyInstallments {
+      font-weight: 300;
+    }
+    .propertyFeature {
+      display: flex;
+      flex-direction: column;
+      padding-top: 16px;
+      flex-grow: 1;
+      .iconDetail {
+        font-weight: 300;
+        svg {
+          width: 16px;
+        }
+      }
+    }
+  }
+  button {
+    background-color: #24a0ed;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    &:hover {
+      background-color: #1183ca;
+    }
+    &:active {
+      background-color: #389bd9;
+    }
+  }
+  .closeIcon {
+    cursor: pointer;
+    svg {
+      width: 24px;
+      color: gray;
+      padding: 2px;
+      border-radius: 16px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      &:active {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

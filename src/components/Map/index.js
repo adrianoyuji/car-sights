@@ -4,8 +4,9 @@ import GoogleMapReact from "google-map-react";
 
 export default function Map({
   locationData,
-  hoveredPropertie,
-  setHoveredPropertie,
+  hoveredProperty,
+  setHoveredProperty,
+  setPropertyDetails,
 }) {
   const center = {
     lat: locationData.lat,
@@ -21,14 +22,14 @@ export default function Map({
         zoom={center.zoom}
         distanceToMouse={(e) => null}
       >
-        {propertiesList.map((propertie, index) => (
+        {propertiesList.map((property, index) => (
           <MapMarker
-            propertie={propertie}
-            lat={propertie.coord.lat}
-            lng={propertie.coord.lng}
+            property={property}
+            lat={property.coord.lat}
+            lng={property.coord.lng}
             key={index}
-            hoveredPropertie={hoveredPropertie}
-            setHoveredPropertie={setHoveredPropertie}
+            hoveredProperty={hoveredProperty}
+            setPropertyDetails={setPropertyDetails}
           />
         ))}
       </GoogleMapReact>

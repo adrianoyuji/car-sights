@@ -3,30 +3,32 @@ import Icon from "@mdi/react";
 import { mdiBed, mdiToilet, mdiRulerSquare } from "@mdi/js";
 
 export default function MenuItem({
-  propertie,
+  property,
   index,
-  hoveredPropertie,
-  setHoveredPropertie,
+  hoveredProperty,
+  setHoveredProperty,
+  setPropertyDetails,
 }) {
   return (
     <div
       className={index % 2 ? "menuItem" : "menuItem menuItemOdd"}
-      onMouseEnter={() => setHoveredPropertie(propertie.id)}
-      onMouseLeave={() => setHoveredPropertie("")}
+      onClick={() => setPropertyDetails(property)}
+      onMouseEnter={() => setHoveredProperty(property.id)}
+      onMouseLeave={() => setHoveredProperty("")}
     >
-      <img src={propertie.image} />
+      <img src={property.image} />
       <div className="propertieInfo">
-        <span className="propertiesPrice">${propertie.price}</span>
-        <span className="propertiesAddress">{propertie.address}</span>
+        <span className="propertiesPrice">${property.price}</span>
+        <span className="propertiesAddress">{property.address}</span>
         <div className="propertiesFeatures">
           <span className="feature">
-            <Icon path={mdiBed} /> {propertie.features.bd} bedrooms
+            <Icon path={mdiBed} /> {property.features.bd} bedrooms
           </span>
           <span className="feature">
-            <Icon path={mdiToilet} /> {propertie.features.ba} bathrooms
+            <Icon path={mdiToilet} /> {property.features.ba} bathrooms
           </span>
           <span className="feature">
-            <Icon path={mdiRulerSquare} /> {propertie.features.sqft} sqft
+            <Icon path={mdiRulerSquare} /> {property.features.sqft} sqft
           </span>
         </div>
       </div>

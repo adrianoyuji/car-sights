@@ -41,6 +41,11 @@
           flex: 3;
 }
 
+.app .modal {
+  height: auto;
+  width: auto;
+}
+
 body {
   margin: 0px;
 }
@@ -64,6 +69,12 @@ html {
 
 .header .logo {
   padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .header .logo img {
@@ -71,6 +82,34 @@ html {
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.header .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 16px;
+}
+
+.header .links svg {
+  width: 36px;
+  padding: 4px;
+  border-radius: 16px;
+}
+
+.header .links svg:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header .links svg:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .menu {
@@ -241,5 +280,127 @@ html {
 
 .menuItemOdd {
   background-color: #ccc;
+}
+
+.propertyContainer {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.propertyContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  padding: 8px;
+  height: 50vh;
+}
+
+.propertyContainer .propertyDetails {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.propertyContainer .propertyDetails .propertyClass {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.propertyContainer .propertyDetails .propertyAddress {
+  font-size: larger;
+  font-weight: 300;
+}
+
+.propertyContainer .propertyDetails .propertyPrice {
+  font-size: xx-large;
+  color: #3d5e2a;
+}
+
+.propertyContainer .propertyDetails .propertyInstallments {
+  font-weight: 300;
+}
+
+.propertyContainer .propertyDetails .propertyFeature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.propertyContainer .propertyDetails .propertyFeature .iconDetail {
+  font-weight: 300;
+}
+
+.propertyContainer .propertyDetails .propertyFeature .iconDetail svg {
+  width: 16px;
+}
+
+.propertyContainer button {
+  background-color: #24a0ed;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.propertyContainer button:hover {
+  background-color: #1183ca;
+}
+
+.propertyContainer button:active {
+  background-color: #389bd9;
+}
+
+.propertyContainer .closeIcon {
+  cursor: pointer;
+}
+
+.propertyContainer .closeIcon svg {
+  width: 24px;
+  color: gray;
+  padding: 2px;
+  border-radius: 16px;
+}
+
+.propertyContainer .closeIcon svg:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.propertyContainer .closeIcon svg:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=index.css.map */

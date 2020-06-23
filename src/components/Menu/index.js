@@ -10,8 +10,9 @@ const buttonLocations = [
 export default function Menu({
   setLocationName,
   locationData,
-  hoveredPropertie,
-  setHoveredPropertie,
+  hoveredProperty,
+  setHoveredProperty,
+  setPropertyDetails,
 }) {
   return (
     <div className="menu">
@@ -27,13 +28,14 @@ export default function Menu({
         ))}
       </div>
       <div className="propertiesList">
-        {locationData.properties.map((propertie, index) => (
+        {locationData.properties.map((property, index) => (
           <MenuItem
-            propertie={propertie}
+            property={property}
             key={index}
             index={index}
-            hoveredPropertie={hoveredPropertie}
-            setHoveredPropertie={setHoveredPropertie}
+            hoveredProperty={hoveredProperty}
+            setHoveredProperty={setHoveredProperty}
+            setPropertyDetails={setPropertyDetails}
           />
         ))}
       </div>
