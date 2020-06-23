@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "@mdi/react";
 import { mdiBed, mdiToilet, mdiRulerSquare, mdiClose } from "@mdi/js";
 
-export default function MenuItem({ property, onClose }) {
+export default function MenuItem({ property, onClose, currency }) {
   const propertyClass = (classType) => {
     switch (classType) {
       case "high-end":
@@ -19,13 +19,17 @@ export default function MenuItem({ property, onClose }) {
   if (!!property) {
     return (
       <div className="propertyContainer">
-        <img src={property.image} />
+        <img src={property.image} alt="property thumb" />
         <div className="propertyDetails">
           <span className="propertyClass">{propertyClass(property.class)}</span>
           <span className="propertyAddress">{property.address}</span>
-          <span className="propertyPrice">${property.price}</span>
+          <span className="propertyPrice">
+            {currency}
+            {property.price}
+          </span>
           <span className="propertyInstallments">
-            or ${(property.price / 195).toFixed(2)}/month
+            or {currency}
+            {(property.price / 195).toFixed(2)}/month
           </span>
           <div className="propertyFeature">
             Features:

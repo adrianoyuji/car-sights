@@ -60,9 +60,11 @@ export default function App() {
         isOpen={!!propertyDetails}
         onRequestClose={() => setPropertyDetails(false)}
         style={customStyles}
+        ariaHideApp={false}
       >
         <PropertyDetails
           property={propertyDetails}
+          currency={locationData.currency}
           onClose={() => setPropertyDetails(false)}
         />
       </Modal>
@@ -70,6 +72,7 @@ export default function App() {
         isOpen={information}
         onRequestClose={() => setInformation(false)}
         style={customStyles}
+        ariaHideApp={false}
       >
         <Information onClose={() => setInformation(false)} />
       </Modal>

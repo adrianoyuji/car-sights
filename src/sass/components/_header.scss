@@ -19,7 +19,9 @@
     flex-direction: row;
     align-items: center;
     padding-right: 16px;
-
+    .informationIcon {
+      cursor: pointer;
+    }
     svg {
       width: 38px;
       padding: 4px;

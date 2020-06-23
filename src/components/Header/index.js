@@ -10,9 +10,9 @@ export default function Header({ setInformation }) {
         <img src={LogoImage} alt="logo.png" />
       </div>
       <div className="links">
-        <a onClick={() => setInformation(true)}>
+        <span className="informationIcon" onClick={() => setInformation(true)}>
           <Icon path={mdiInformationOutline} color="gray" />
-        </a>
+        </span>
         <a
           href="https://github.com/adrianoyuji/sato-real-estate"
           target="_blank"

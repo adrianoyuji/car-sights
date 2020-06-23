@@ -5,6 +5,7 @@ export default {
   lat: 28.5351439,
   lng: -81.3917208,
   zoom: 11,
+  currency: "$",
   properties: [
     {
       id: 0,

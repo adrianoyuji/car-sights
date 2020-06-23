@@ -4,8 +4,8 @@ import { mdiBed, mdiToilet, mdiRulerSquare } from "@mdi/js";
 
 export default function MenuItem({
   property,
+  currency,
   index,
-  hoveredProperty,
   setHoveredProperty,
   setPropertyDetails,
 }) {
@@ -16,9 +16,12 @@ export default function MenuItem({
       onMouseEnter={() => setHoveredProperty(property.id)}
       onMouseLeave={() => setHoveredProperty("")}
     >
-      <img src={property.image} />
+      <img src={property.image} alt="property thumb" />
       <div className="propertieInfo">
-        <span className="propertiesPrice">${property.price}</span>
+        <span className="propertiesPrice">
+          {currency}
+          {property.price}
+        </span>
         <span className="propertiesAddress">{property.address}</span>
         <div className="propertiesFeatures">
           <span className="feature">
