@@ -7,6 +7,7 @@ import Header from "../Header";
 import Map from "../Map";
 import Menu from "../Menu";
 import PropertyDetails from "../PropertyDetails";
+import Information from "../Information";
 
 //modal style
 const customStyles = {
@@ -25,6 +26,7 @@ export default function App() {
   const [locationData, setLocationData] = useState(locations[locationName]);
   const [hoveredProperty, setHoveredProperty] = useState("");
   const [propertyDetails, setPropertyDetails] = useState(false);
+  const [information, setInformation] = useState(false);
 
   useEffect(() => {
     setLocationData(locations[locationName]);
@@ -33,7 +35,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="appHeader">
-        <Header />
+        <Header setInformation={setInformation} />
       </div>
       <div className="appBody">
         <div className="appMap">
@@ -63,6 +65,13 @@ export default function App() {
           property={propertyDetails}
           onClose={() => setPropertyDetails(false)}
         />
+      </Modal>
+      <Modal
+        isOpen={information}
+        onRequestClose={() => setInformation(false)}
+        style={customStyles}
+      >
+        <Information onClose={() => setInformation(false)} />
       </Modal>
     </div>
   );

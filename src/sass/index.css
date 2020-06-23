@@ -99,7 +99,7 @@ html {
 }
 
 .header .links svg {
-  width: 36px;
+  width: 38px;
   padding: 4px;
   border-radius: 16px;
 }
@@ -113,7 +113,7 @@ html {
 }
 
 .menu {
-  height: 93.9vh;
+  height: 94.4vh;
   width: 100%;
   background-color: #ddd;
   display: -webkit-box;
@@ -180,7 +180,7 @@ html {
 }
 
 .map {
-  height: 93.9vh;
+  height: 94.4vh;
   width: 100%;
 }
 
@@ -401,6 +401,44 @@ html {
 }
 
 .propertyContainer .closeIcon svg:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.informationContainer .informationHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.informationContainer .informationHeader h2 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.informationContainer .informationHeader .closeIcon {
+  cursor: pointer;
+}
+
+.informationContainer .informationHeader .closeIcon svg {
+  width: 24px;
+  color: gray;
+  padding: 2px;
+  border-radius: 16px;
+}
+
+.informationContainer .informationHeader .closeIcon svg:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.informationContainer .informationHeader .closeIcon svg:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=index.css.map */

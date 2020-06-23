@@ -36,10 +36,20 @@ export default function MenuItem({ property, onClose }) {
               <Icon path={mdiToilet} /> {property.features.ba} bathrooms
             </span>
             <span className="iconDetail">
-              <Icon path={mdiRulerSquare} /> {property.features.sqft} sqft
+              <Icon path={mdiRulerSquare} />
+              {property.features.sqft} sqft.
             </span>
           </div>
-          <button type="button">I AM INTERESTED</button>
+          <button
+            type="button"
+            onClick={() =>
+              alert(
+                "This is just a mock! Thanks for testing my website! by Adriano Yuji"
+              )
+            }
+          >
+            I AM INTERESTED
+          </button>
         </div>
         <div className="closeIcon" onClick={onClose}>
           <Icon path={mdiClose} />
