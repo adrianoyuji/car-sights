@@ -90,7 +90,7 @@ export default {
     {
       id: 8,
       class: "low-end",
-      features: { bd: 0, ba: 0, sqft: 0 },
+      features: { bd: 2, ba: 1, sqft: 587 },
       coord: { lat: 51.5130411, lng: 0.0088931 },
       address: "Hallsville Road, E16",
       price: 112000,

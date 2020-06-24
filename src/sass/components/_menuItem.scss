@@ -30,12 +30,14 @@
       }
     }
   }
-  &:hover {
-    transform: scale(0.99);
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-  }
 }
 
 .menuItemOdd {
   background-color: #ccc;
+}
+
+.hoveredMenuItem {
+  transform: scale(0.99);
+  background-color: #aaa;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }

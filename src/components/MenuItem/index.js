@@ -6,12 +6,27 @@ export default function MenuItem({
   property,
   currency,
   index,
+  hoveredProperty,
   setHoveredProperty,
   setPropertyDetails,
 }) {
+  function customClass() {
+    let customStyle = "";
+    if (index % 2) {
+      customStyle = "menuItem";
+    } else {
+      customStyle = "menuItem menuItemOdd";
+    }
+    if (property.id === hoveredProperty) {
+      customStyle += " hoveredMenuItem";
+    }
+
+    return customStyle;
+  }
+
   return (
     <div
-      className={index % 2 ? "menuItem" : "menuItem menuItemOdd"}
+      className={customClass()}
       onClick={() => setPropertyDetails(property)}
       onMouseEnter={() => setHoveredProperty(property.id)}
       onMouseLeave={() => setHoveredProperty("")}

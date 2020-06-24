@@ -28,6 +28,7 @@ export default function Map({
             lat={property.coord.lat}
             lng={property.coord.lng}
             key={index}
+            setHoveredProperty={setHoveredProperty}
             hoveredProperty={hoveredProperty}
             setPropertyDetails={setPropertyDetails}
           />

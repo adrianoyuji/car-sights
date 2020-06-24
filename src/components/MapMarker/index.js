@@ -5,6 +5,7 @@ import { mdiHome } from "@mdi/js";
 export default function MapMarker({
   property,
   hoveredProperty,
+  setHoveredProperty,
   setPropertyDetails,
 }) {
   return (
@@ -13,6 +14,8 @@ export default function MapMarker({
         property.id === hoveredProperty ? "marker hoveredMarker" : "marker"
       }
       onClick={() => setPropertyDetails(property)}
+      onMouseEnter={() => setHoveredProperty(property.id)}
+      onMouseLeave={() => setHoveredProperty("")}
     >
       <Icon path={mdiHome} />
     </div>
