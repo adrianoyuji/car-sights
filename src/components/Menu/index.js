@@ -1,5 +1,6 @@
 import React from "react";
 import MenuItem from "../MenuItem";
+import Filters from "../Filters";
 
 const buttonLocations = [
   { name: "Dourados", id: "dourados" },
@@ -13,6 +14,8 @@ export default function Menu({
   hoveredProperty,
   setHoveredProperty,
   setPropertyDetails,
+  activeFilters,
+  setActiveFilters,
 }) {
   return (
     <div className="menu">
@@ -26,6 +29,12 @@ export default function Menu({
             {buttonLocation.name}
           </div>
         ))}
+      </div>
+      <div className="filtersList">
+        <Filters
+          activeFilters={activeFilters}
+          setActiveFilters={setActiveFilters}
+        />
       </div>
       <div className="propertiesList">
         {locationData.properties.map((property, index) => (

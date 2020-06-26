@@ -1,0 +1,36 @@
+.filter {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .classFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    .classButton {
+      padding: 4px;
+      margin-right: 4px;
+      margin-left: 4px;
+      display: flex;
+      border: solid;
+      border-width: 1px;
+      border-color: #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover {
+        background-color: green;
+        color: #fff;
+      }
+      &:active {
+        background-color: darkgreen;
+        color: white;
+      }
+    }
+  }
+}
+.selectedButton {
+  background-color: forestgreen;
+  color: white;
+}

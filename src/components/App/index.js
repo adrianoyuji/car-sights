@@ -27,6 +27,7 @@ export default function App() {
   const [hoveredProperty, setHoveredProperty] = useState("");
   const [propertyDetails, setPropertyDetails] = useState(false);
   const [information, setInformation] = useState(false);
+  const [activeFilters, setActiveFilters] = useState({ classType: "all" });
 
   useEffect(() => {
     setLocationData(locations[locationName]);
@@ -40,6 +41,7 @@ export default function App() {
       <div className="appBody">
         <div className="appMap">
           <Map
+            activeFilters={activeFilters}
             locationData={locationData}
             hoveredProperty={hoveredProperty}
             setHoveredProperty={setHoveredProperty}
@@ -48,6 +50,8 @@ export default function App() {
         </div>
         <div className="appMenu">
           <Menu
+            activeFilters={activeFilters}
+            setActiveFilters={setActiveFilters}
             setLocationName={setLocationName}
             locationData={locationData}
             hoveredProperty={hoveredProperty}
