@@ -1,12 +1,45 @@
 .filter {
-  padding: 8px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-  .classFilter {
+  background-color: #eee;
+  border-top: solid;
+  border-width: 1px;
+  border-top-color: #aaa;
+  .filterHeader {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    padding: 8px;
+    background-color: #ccc;
+    cursor: pointer;
+    .filterHeaderTitle {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+    &:hover {
+      background-color: #aaa;
+    }
+  }
+  .filterBodyHide {
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    overflow: hidden;
+  }
+  .filterBodyShow {
+    max-height: 500px;
+    transition: max-height 1.5s ease-in;
+    overflow: hidden;
+  }
+  .classFilter {
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     .classButton {
@@ -29,8 +62,48 @@
       }
     }
   }
+  .priceRange {
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+    .priceInputs {
+      display: flex;
+      flex-direction: row;
+      .inputTitles {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+
+  button {
+    margin-top: 16px;
+    background-color: forestgreen; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+      background-color: green;
+    }
+  }
 }
 .selectedButton {
   background-color: forestgreen;
   color: white;
+}
+
+input[type="number"] {
+  padding: 3px 5px;
+  margin: 2px 0;
+  box-sizing: border-box;
 }

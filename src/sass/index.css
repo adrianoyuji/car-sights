@@ -54,6 +54,18 @@ html {
   font-family: "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .header {
   height: 100%;
   width: 100%;
@@ -448,29 +460,82 @@ html {
 }
 
 .filter {
-  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #eee;
+  border-top: solid;
+  border-width: 1px;
+  border-top-color: #aaa;
 }
 
-.filter .classFilter {
+.filter .filterHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #aaa;
+  padding: 8px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.filter .filterHeader .filterHeaderTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.filter .filterHeader:hover {
+  background-color: #aaa;
+}
+
+.filter .filterBodyHide {
+  max-height: 0;
+  -webkit-transition: max-height 1s ease-out;
+  transition: max-height 1s ease-out;
+  overflow: hidden;
+}
+
+.filter .filterBodyShow {
+  max-height: 500px;
+  -webkit-transition: max-height 1.5s ease-in;
+  transition: max-height 1.5s ease-in;
+  overflow: hidden;
+}
+
+.filter .classFilter {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -504,8 +569,72 @@ html {
   color: white;
 }
 
+.filter .priceRange {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filter .priceRange .priceInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.filter .priceRange .priceInputs .inputTitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.filter button {
+  margin-top: 16px;
+  background-color: forestgreen;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: green;
+}
+
 .selectedButton {
   background-color: forestgreen;
   color: white;
+}
+
+input[type="number"] {
+  padding: 3px 5px;
+  margin: 2px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=index.css.map */

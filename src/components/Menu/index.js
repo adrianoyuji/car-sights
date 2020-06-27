@@ -37,17 +37,41 @@ export default function Menu({
         />
       </div>
       <div className="propertiesList">
-        {locationData.properties.map((property, index) => (
-          <MenuItem
-            property={property}
-            currency={locationData.currency}
-            key={index}
-            index={index}
-            hoveredProperty={hoveredProperty}
-            setHoveredProperty={setHoveredProperty}
-            setPropertyDetails={setPropertyDetails}
-          />
-        ))}
+        {locationData.properties.map((property, index) => {
+          if (
+            activeFilters.minPrice < property.price &&
+            property.price < activeFilters.maxPrice &&
+            activeFilters.classType === "all"
+          ) {
+            return (
+              <MenuItem
+                property={property}
+                currency={locationData.currency}
+                key={index}
+                index={index}
+                hoveredProperty={hoveredProperty}
+                setHoveredProperty={setHoveredProperty}
+                setPropertyDetails={setPropertyDetails}
+              />
+            );
+          } else if (
+            activeFilters.minPrice < property.price &&
+            property.price < activeFilters.maxPrice &&
+            activeFilters.classType === property.class
+          ) {
+            return (
+              <MenuItem
+                property={property}
+                currency={locationData.currency}
+                key={index}
+                index={index}
+                hoveredProperty={hoveredProperty}
+                setHoveredProperty={setHoveredProperty}
+                setPropertyDetails={setPropertyDetails}
+              />
+            );
+          }
+        })}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ export default function Map({
   hoveredProperty,
   setHoveredProperty,
   setPropertyDetails,
+  activeFilters,
 }) {
   const center = {
     lat: locationData.lat,
@@ -22,17 +23,41 @@ export default function Map({
         zoom={center.zoom}
         distanceToMouse={(e) => null}
       >
-        {propertiesList.map((property, index) => (
-          <MapMarker
-            property={property}
-            lat={property.coord.lat}
-            lng={property.coord.lng}
-            key={index}
-            setHoveredProperty={setHoveredProperty}
-            hoveredProperty={hoveredProperty}
-            setPropertyDetails={setPropertyDetails}
-          />
-        ))}
+        {propertiesList.map((property, index) => {
+          if (
+            activeFilters.minPrice < property.price &&
+            property.price < activeFilters.maxPrice &&
+            activeFilters.classType === "all"
+          ) {
+            return (
+              <MapMarker
+                property={property}
+                lat={property.coord.lat}
+                lng={property.coord.lng}
+                key={index}
+                setHoveredProperty={setHoveredProperty}
+                hoveredProperty={hoveredProperty}
+                setPropertyDetails={setPropertyDetails}
+              />
+            );
+          } else if (
+            activeFilters.minPrice < property.price &&
+            property.price < activeFilters.maxPrice &&
+            activeFilters.classType === property.class
+          ) {
+            return (
+              <MapMarker
+                property={property}
+                lat={property.coord.lat}
+                lng={property.coord.lng}
+                key={index}
+                setHoveredProperty={setHoveredProperty}
+                hoveredProperty={hoveredProperty}
+                setPropertyDetails={setPropertyDetails}
+              />
+            );
+          }
+        })}
       </GoogleMapReact>
     </div>
   );
