@@ -21,7 +21,15 @@ export default function MenuItem({ property, onClose, currency }) {
       <div className="propertyContainer">
         <img src={property.image} alt="property thumb" />
         <div className="propertyDetails">
-          <span className="propertyClass">{propertyClass(property.class)}</span>
+          <div className="modalHeader">
+            <span className="propertyClass">
+              {propertyClass(property.class)}
+            </span>
+            <div className="closeIcon" onClick={onClose}>
+              <Icon path={mdiClose} />
+            </div>
+          </div>
+
           <span className="propertyAddress">{property.address}</span>
           <span className="propertyPrice">
             {currency}
@@ -54,9 +62,6 @@ export default function MenuItem({ property, onClose, currency }) {
           >
             I AM INTERESTED
           </button>
-        </div>
-        <div className="closeIcon" onClick={onClose}>
-          <Icon path={mdiClose} />
         </div>
       </div>
     );

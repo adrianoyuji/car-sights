@@ -22,6 +22,33 @@
     width: auto;
   }
 }
+@media screen and (max-width: 768px) {
+  .app {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .appHeader {
+      flex: 0.1;
+    }
+    .appBody {
+      flex: 1.9;
+      display: flex;
+      flex-direction: column;
+      .appMap {
+        flex: 7;
+      }
+      .appMenu {
+        flex: 3;
+      }
+    }
+    .modal {
+      height: auto;
+      width: auto;
+    }
+  }
+}
+
 body {
   margin: 0px;
 }

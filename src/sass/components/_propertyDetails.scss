@@ -13,11 +13,32 @@
     padding: 8px;
     display: flex;
     flex-direction: column;
-
-    .propertyClass {
-      font-size: larger;
-      font-weight: bold;
+    .modalHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .propertyClass {
+        font-size: larger;
+        font-weight: bold;
+        flex-grow: 1;
+      }
+      .closeIcon {
+        cursor: pointer;
+        svg {
+          width: 24px;
+          color: gray;
+          padding: 2px;
+          border-radius: 16px;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+          &:active {
+            background-color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
     }
+
     .propertyAddress {
       font-size: larger;
       font-weight: 300;
@@ -63,19 +84,10 @@
       background-color: #389bd9;
     }
   }
-  .closeIcon {
-    cursor: pointer;
-    svg {
-      width: 24px;
-      color: gray;
-      padding: 2px;
-      border-radius: 16px;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-      &:active {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-    }
+}
+@media screen and (max-width: 768px) {
+  .propertyContainer {
+    flex-direction: column;
+    max-width: 100vw;
   }
 }
