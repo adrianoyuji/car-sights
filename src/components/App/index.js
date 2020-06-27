@@ -50,7 +50,6 @@ export default function App() {
             hoveredProperty={hoveredProperty}
             setHoveredProperty={setHoveredProperty}
             setPropertyDetails={setPropertyDetails}
-            activeFilters={activeFilters}
           />
         </div>
         <div className="appMenu">

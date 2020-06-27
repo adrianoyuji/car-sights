@@ -70,7 +70,7 @@ export default function Menu({
                 setPropertyDetails={setPropertyDetails}
               />
             );
-          }
+          } else return null;
         })}
       </div>
     </div>

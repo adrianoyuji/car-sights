@@ -56,7 +56,7 @@ export default function Map({
                 setPropertyDetails={setPropertyDetails}
               />
             );
-          }
+          } else return null;
         })}
       </GoogleMapReact>
     </div>
