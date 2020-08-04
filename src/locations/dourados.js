@@ -101,8 +101,7 @@ export default {
       coord: { lat: -22.2420301, lng: -54.7460393 },
       address: "Rua Seis, 2540",
       price: 60000,
-      image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/5732/5732/tmp/1200x900-5e2edc16a2073c4813a612ae4f025c95d240a862cc79a_img_2678.jpg",
+      image: "https://www.habitacao.engepar.com/media/images_site/banner.png",
     },
   ],
 };
