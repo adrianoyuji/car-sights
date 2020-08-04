@@ -35,7 +35,7 @@ export default {
       address: "905 Pine Pointe Ln, Orlando",
       price: 249900,
       image:
-        "https://photos.zillowstatic.com/cc_ft_768/IS3r9o6k2o8vhn1000000000.webp",
+        "https://storage.pressadvantage.com/uploads/image/6134/sellyourhousefast.jpg",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default {
       address: "3407 Carriage Lake Dr, Orlando",
       price: 275000,
       image:
-        "https://photos.zillowstatic.com/cc_ft_768/IS7ue1swa18e5a1000000000.webp",
+        "https://mullerimoveisrj.com.br/wp-content/uploads/2019/10/casa-em-orlando-usa-03.jpg",
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ export default {
       address: "1200 Balsam Willow Trl, Orlando",
       price: 369000,
       image:
-        "https://photos.zillowstatic.com/cc_ft_768/ISzb3aijliswd91000000000.webp",
+        "https://ssl.cdn-redfin.com/photo/118/mbphoto/130/genMid.O5827130_0.jpg",
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ export default {
       address: "2624 Smithfield Dr, Orlando",
       price: 325000,
       image:
-        "https://photos.zillowstatic.com/cc_ft_768/ISfcqkzmu3vsun1000000000.webp",
+        "https://r-cf.bstatic.com/images/hotel/max1024x768/125/125225314.jpg",
     },
     {
       id: 6,
@@ -75,7 +75,7 @@ export default {
       address: "6437 Golden Nugget Dr, Orlando",
       price: 102800,
       image:
-        "https://photos.zillowstatic.com/cc_ft_768/IS3rpsccluczpe1000000000.webp",
+        "https://ssl.cdn-redfin.com/photo/118/mbphoto/367/genMid.O5573367_0.jpg",
     },
     {
       id: 7,
@@ -84,7 +84,8 @@ export default {
       coord: { lat: 28.5264998, lng: -81.402129 },
       address: "1621 Grand St, Orlando",
       price: 105000,
-      image: "https://photos.zillowstatic.com/p_e/ISv0c2o74aa0vu1000000000.jpg",
+      image:
+        "https://cdn.carrot.com/uploads/sites/8416/2012/01/Orlando-House.jpg",
     },
     {
       id: 8,
@@ -94,7 +95,7 @@ export default {
       address: "1805 Riley Ave, Orlando, FL 32805",
       price: 109392,
       image:
-        "https://maps.googleapis.com/maps/api/streetview?location=1805+Riley+Ave%2C+Orlando%2C+FL+32805&size=768x576&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&&signature=0mx7OchqVGXU38SAngjPT_Wq8Nw=",
+        "https://images1.apartments.com/i2/WQYdsBUISfizdiXABQRDjt1OSgsFBK2VbRNyvfb8kZQ/117/2-story-home-hiawassee-area-orlando-fl-primary-photo.jpg",
     },
     {
       id: 9,
@@ -103,8 +104,7 @@ export default {
       coord: { lat: 28.5308152, lng: -81.4392755 },
       address: "4619 W Gore Ave, Orlando",
       price: 109900,
-      image:
-        "https://photos.zillowstatic.com/cc_ft_768/IS3jzi1ey5g9qs0000000000.webp",
+      image: "https://www.iwantavilla.com/images/buy-an-orlando-villa.jpg",
     },
   ],
 };

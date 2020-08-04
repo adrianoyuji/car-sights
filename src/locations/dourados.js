@@ -14,8 +14,7 @@ export default {
       coord: { lat: -22.2171546, lng: -54.8383568 },
       address: "Rua Alfredo Richard Klein, 406",
       price: 690000,
-      image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/5661/5661/tmp/1200x900-5dcac3265c15e9fec45a4a2b617ccdc562bd5ceaa283c_20191107_161004_resized.jpg",
+      image: "https://cdn.uso.com.br/10374/2018/10/83214438.jpg",
     },
     {
       id: 1,
@@ -24,8 +23,7 @@ export default {
       coord: { lat: -22.2131306, lng: -54.8381051 },
       address: "Rua Mustafá Saleh Abdo Sater, 235",
       price: 720000,
-      image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/5457/5457/tmp/1200x900-5cbf2b4602fa24afe706904d66221b522fea452973c42_img-20190320-wa0021.jpg",
+      image: "https://cdn.uso.com.br/10374/2019/09/102143355.jpg",
     },
     {
       id: 2,
@@ -35,7 +33,7 @@ export default {
       address: "Rua Pedro Celestino, 1815",
       price: 720000,
       image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/5833/5833/tmp/1200x900-5ea9db2f188800d4c4b10366739e724f80bb04706f5da_whatsapp-image-2020-04-29-at-15.jpg",
+        "https://lh3.googleusercontent.com/proxy/wrrvgcOvJ5ElSrOLxozCk6HlkrnLpVDRG4OI5jTe_PefD7Xm_AY3W6fYfDSweBl2J0A2jtFIGcetDNg6YL_4lwFQlEDgcW6WgR2nZrwhQNKfbZaQ4uioGeegPVyD_yAHhaV5NYmgcGYFHcI",
     },
     {
       id: 3,
@@ -44,8 +42,7 @@ export default {
       coord: { lat: -22.2095253, lng: -54.835627 },
       address: "Rua Eduardo Casaro, 04",
       price: 300000,
-      image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/4081/4081/tmp/1200x900-5847f091b307bda5b0b80c8aa97a432809c9d3591bca5_sam_1901.jpg",
+      image: "https://cdn.uso.com.br/10374/2018/08/76864524.jpg",
     },
     {
       id: 4,
@@ -85,7 +82,7 @@ export default {
       address: "Rua Florianópolis, 1090",
       price: 95000,
       image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/5776/5776/tmp/1200x554-5e5f1aa9db39c19c42c180c561ac8e3af6561aed132bf_20200208_080622.jpg",
+        "https://mapio.net/images-immo-detalhe/754183/casa-com-4-quartos-para-alugar-por-r-3300mes-rua-iguassu-1529-vila-sao-luiz-dourados-ms-img-0.jpeg",
     },
     {
       id: 8,
@@ -95,7 +92,7 @@ export default {
       address: "Rua Arthur Frantz, 1275",
       price: 120000,
       image:
-        "https://www.imobiliariacolmeia.com.br/media/galeria_imoveis/5774/5774/tmp/1200x583-5e5f0eb421511806bcf22f01069c67df678384768b167_img-20200218-wa0027.jpg",
+        "https://imgbr.imovelwebcdn.com/avisos/2/29/40/96/11/16/1200x1200/1422772527.jpg",
     },
     {
       id: 9,
